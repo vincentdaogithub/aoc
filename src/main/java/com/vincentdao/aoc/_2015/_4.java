@@ -6,12 +6,12 @@ import java.security.NoSuchAlgorithmException;
 
 public final class _4 {
 
-	private static final String input = "ckczppom";
+	private static final String INPUT = "ckczppom";
 
 	public static void main(String[] args) throws NoSuchAlgorithmException {
 		boolean startWithFiveZerosNotFound = true;
 		for (int i = 0; true; i++) {
-			String hashResult = getHash(input + i);
+			String hashResult = getHash(INPUT + i);
 			if (startWithFiveZerosNotFound && hashResult.startsWith("00000")) {
 				System.out.println("Lowest positive number (at least 5 zeros): " + i);
 				startWithFiveZerosNotFound = false;
